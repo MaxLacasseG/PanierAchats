@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="description" content="Prototype de panier d'achats">
+    <title>PW3 - Tp/Volet 3 - Prototype d'un panier d'achats</title>
+    <link rel="stylesheet" href="http://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="ressources/css/panier.css">
+  </head>
+  <body>
+    <div class="conteneur">
+      <h1>Prototype d'un panier d'achats</h1>
+      <header>
+        <span class="menu-produits actif">Produits</span>
+        <span class="menu-panier">Panier (<strong id="nombre-articles-dans-panier">0</strong>)</span>
+      </header>
+      <section id="produits">
+        <h2>Liste des produits</h2>
+        <div id="liste-produits">
+          <article id="[identifiant du produit]" class="gabarit">
+            <div class="nom">[Nom du produit]</div>
+            <div class="desc">[Description du produit]</div>
+            <div class="prix">[Prix du produit]</div>
+            <div class="ajouter">Ajouter au panier</div>
+          </article>
+        </div>
+      </section>
+      <section id="panier">
+        <h2>Contenu du panier d'achats</h2>
+        <div class="panier-vide">
+          Votre panier est vide.
+        </div>
+        <div id="liste-articles">
+          <article class="entete">
+            <div></div>
+            <div>Nom du produit</div>
+            <div>Prix unitaire</div>
+            <div>Quantité</div>
+            <div></div>
+            <div>Sous total</div>
+          </article>
+          <!-- Début : Gabarit d'un article dans le panier d'achat -->
+          <article id="[identifiant de panier_article]" class="gabarit">
+            <div class="supprimer btn">Supprimer</div>
+            <div class="nom">[Nom du produit]</div>
+            <div class="prix">[Prix unitaire]</div>
+            <div class="quantite"><input type="number" min=0 name="qte" value="1"></div>
+            <div class="modifier btn">Modifier</div>
+            <div class="soustotal">[Sous-total calculé]</div>
+          </article>
+          <!-- Fin : Gabarit d'un article dans le panier d'achat -->
+        </div>
+        <div class="total-panier">
+          Total du panier (avant taxes et livraison) : <span id="montant-total">[Total calculé]</span>
+        </div>
+      </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="ressources/js/panier.js"></script>
+  </body>
+</html>

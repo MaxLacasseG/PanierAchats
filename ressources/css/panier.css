@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.conteneur {
+  width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px; 
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  color: #555;
+}
+
+.gabarit {
+  display: none;
+}
+
+h1 {
+  font-size: 1.3em;
+}
+
+header {
+  border-bottom: 2px solid #666;
+  overflow: hidden;
+}
+
+header > span {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 0px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+header > span {
+  float: left;
+  margin-right: 10px;
+}
+
+header > span.actif {
+  background-color: #555;
+  color: #eee;
+  border: 1px solid #333;
+  border-bottom: 0;
+}
+
+section#panier {
+  display: none;
+}
+
+h2 {
+  font-size: 1.1em;
+  color: #333;
+}
+
+#liste-produits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#liste-produits article {
+  width: 250px;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+
+#liste-produits article div {
+  text-align: center;
+  margin: 10px;
+}
+
+#liste-produits article div.desc {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+#liste-produits article div.prix {
+  color: #900;
+  font-family: 'Roboto Slab', serif;
+  margin: 20px 0;
+}
+
+#liste-produits article div.ajouter {
+  border:  1px solid #a00;
+  border-radius: 3px;
+  background-color: #900;
+  color: #ddd;
+  cursor: pointer;
+  padding: 5px 10px;
+  width: 170px;
+  margin: 20px auto 10px auto;
+  box-shadow: 0 0 10px 1px #aaa;
+}
+
+#liste-articles {
+  margin-top: 30px;
+}
+
+#liste-articles article {
+  border-bottom: 1px dotted #bbb;
+  margin: 10px 0;
+  padding-bottom: 10px;
+}
+
+#liste-articles article:first-child {
+  border-bottom: 1px solid #999;
+  margin: 15px 0;
+  padding-bottom: 5px;
+}
+
+#liste-articles article:last-child {
+  border-bottom: 0px solid #999;
+}
+
+#liste-articles article div {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#liste-articles article div.btn {
+  background-color: #555;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+#liste-articles article div:nth-child(1),
+#liste-articles article div:nth-child(5) {
+  width: 80px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#liste-articles article div:nth-child(2) {
+  width: 400px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#liste-articles article div:nth-child(3) {
+  width: 100px;
+  text-align: right;
+}
+
+#liste-articles article div:nth-child(4) {
+  width: 100px;
+  text-align: center;
+}
+
+#liste-articles article div:nth-child(6) {
+  width: 120px;
+  float: right;
+  text-align: right;
+}
+
+#liste-articles article div.quantite input {
+  width: 50px;
+  padding: 5px;
+}
+
+#panier .total-panier {
+  margin-top: 10px;
+  text-align: right;
+  border-top: 1px solid #999;
+  padding-top: 5px;
+}
+
+#panier .total-panier span {
+  font-weight: bold;
+  margin-left: 10px;
+}
